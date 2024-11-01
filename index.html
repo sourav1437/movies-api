@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- The lang attribute specifies the language of the document, which is set to "en" for English. -->
+<html lang="en"> 
+  <head>
+    <!-- This meta tag sets the character encoding to UTF-8, which supports a wide range of characters from different languages and ensures proper display of special characters. -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- This is a link tag that includes an external CSS file named "style.css." It links the HTML document to the CSS file, allowing the browser to apply the specified styles to the HTML elements. -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- This link tag includes a favicon file named "Icon.ico." The favicon is the small icon displayed in the browser tab or bookmark bar. -->
+    <link rel="shortcut icon" href="Icon.ico" type="image/x-icon" />.
+    <!-- This is the title element that sets the title of the HTML document, which appears in the browser's title bar or tab. -->
+    <title>Movies_Info</title>
+  </head>
+  <body>
+    <!-- This is a div element with the class attribute set to "container." It is used to create a container that wraps the entire content of the webpage. -->
+    <div class="container">
+      <!-- This is a div element with the class attribute set to "header." It represents the header section of the webpage. -->
+      <div class="header">
+        <!-- This is an image element with the src attribute set to "logo.png." It displays an image named "logo.png" on the webpage. The class attribute is set to "poster," which might be used for styling purposes. The alt attribute provides alternative text for the image, which is displayed if the image fails to load. -->
+      <img src="logo.png" class="poster" alt="logo">
+      <h1>Movies....Info</h1>
+      </div>
+      <form>
+        <!-- This is a div element with the class attribute set to "form-group." It is used to group form elements for styling or layout purposes. -->
+        <div class="form-group">
+          <!-- This is an input element of type "text" that creates a text input field. The class attribute is set to "form-control," which might be used for styling purposes. The id attribute is set to "exampleInputEmail1," and the aria-describedby attribute provides an accessible description for the input. The placeholder attribute displays the default text inside the input field. -->
+          <input
+            type="text"
+            class="form-control"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+            placeholder="Search a Movie.."
+          />
+        </div>
+        <!-- This is a button element with the type attribute set to "submit." It creates a submit button for the form. The class attribute is set to "btn," which might be used for styling purposes. The id attribute is set to "search." -->
+        <button type="submit" class="btn" id="search">
+          Search
+        </button>
+      </form>
+
+      <!-- These are div elements with the ids "movies-searchable" and "movies-container." They are used to display the searchable movies and additional movie information, respectively. -->
+      <div id="movies-searchable"></div>
+      <div id="movies-container"></div>
+    </div>
+
+    <!-- These are script tags that include two JavaScript files named "apiTransaction.js" and "app.js." They are used to import JavaScript code to provide functionality and interactivity to the webpage. -->
+    <script src="apiTransaction.js"></script>
+    <script src=" app.js"></script>
+  </body>
+</html>

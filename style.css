@@ -1,0 +1,246 @@
+/* This sets the scroll behavior to smooth for the entire HTML document. When clicking on anchor links, the page will scroll smoothly to the target element. */
+html {
+    scroll-behavior: smooth;
+}
+/* These styles target the scrollbar specifically in webkit-based browsers (e.g., Chrome, Safari). It sets the width of the vertical scrollbar to 2px and the height of the horizontal scrollbar to 5px. */
+::-webkit-scrollbar{
+    width: 2px;
+    height: 5px;
+}
+/* This styles the track of the scrollbar. It adds a 7px border with color #232943 and applies an inset box shadow to create a visual effect. */
+::-webkit-scrollbar-track{
+    border:7px solid #232943;
+    box-shadow:inset 0 0 2.5px 2px rgba(0,0,0,0.5)
+}
+/* This styles the thumb (the draggable part of the scrollbar). It applies a linear gradient background with colors #06dee1 and #79ff6c at a 45-degree angle. The border-radius: 3px creates rounded corners for the thumb. */
+::-webkit-scrollbar-thumb{
+    background:linear-gradient(
+        45deg,
+        #06dee1,
+        #79ff6c
+    );
+border-radius: 3px;
+}
+/* This styles the h1 element, making the text appear with a gradient background. The padding-top: 15px adds some space above the h1 element. The -webkit-linear-gradient creates a gradient with colors cyan and red. The -webkit-background-clip: text and -webkit-text-fill-color: transparent properties apply the gradient as the text's background, making the text transparent and showing the gradient effect. */
+h1{
+    padding-top: 15px;
+      font-size: 45px;
+    background: -webkit-linear-gradient(cyan, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* This styles the elements with the class header, setting them to display as a flex container. This allows child elements within .header to be aligned horizontally. */
+.header{
+    display:flex;
+}
+/* This styles the body element. It sets the text color to rgb(4, 16, 17), which is a dark color for better readability. The margin: 0 removes any default margin. The background-image: linear-gradient(...) applies a linear gradient background to the body. The gradient starts with rgb(255, 255, 255) (white) at the top and transitions to indianred at the bottom */
+body {
+    color: rgb(4, 16, 17);
+    margin: 0;
+    background-image:linear-gradient(rgb(255, 255, 255),indianred)
+}
+/* This styles the elements with the class container. It adds padding of 20px around the elements and centers the elements horizontally using margin: 0 auto. */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+}
+/* This styles the elements with the class movie, adding a top margin of 50px. This will create space between .movie elements and the elements above them. */
+.movie {
+    margin-top: 50px;
+}
+/* This styles the section element. It sets its position to relative, which means any positioned child elements inside it will be positioned relative to the section. The width is set to 100% to occupy the entire width of its parent element. margin-top: 25px adds some space above the section. It is displayed as a flex container, with child elements aligned to the center. flex-wrap: nowrap ensures that the child elements do not wrap to the next line if there is not enough space. overflow-x: auto adds a horizontal scrollbar if the content overflows horizontally. The transition: 250ms all adds smooth transition effects to the section when changes occur. */
+section {
+    position: relative;
+    width: 100%;
+    margin-top: 25px;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    transition: 250ms all;
+    
+}
+/* This styles the elements with the class imageContainer that are children of section. It sets flex: 0 0 auto, which means the .imageContainer elements won't grow or shrink and will maintain their initial size. */
+section .imageContainer {
+    flex: 0 0 auto;
+}
+/* This styles the elements with the class content. It sets the display to none, initially hiding the content. The position is set to relative, which means any positioned child elements inside .content will be positioned relative to it. min-height: 200px ensures there's enough space for the content even if it's empty. The width is set to 100% to occupy the entire width of its parent element, but it's immediately overridden with width: 1600px, fixing the width to 1600px. */
+.content {
+    display: none;
+    position: relative;
+    min-height: 200px;
+    width: 100%;
+    border: 1px solid lightgrey;
+    padding: 20px;
+    width: 1600px;
+  /*height: 900px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.767);
+  z-index: 2;
+  cursor: pointer;
+  background-color:transparent;*/
+}
+
+/* This styles the elements with the class content-display, setting their display to block. This will make them display as block-level elements, which means they will stack vertically. */
+.content-display {
+    display: block;
+}
+
+/* This further styles the elements with the class content-display. It sets them to be a flex container with items justified space-around, which will distribute the child elements evenly with space between them. flex-wrap: wrap allows the items to wrap to the next line if there's not enough space. align-items: center aligns the child elements vertically at the center. */
+.content-display {
+    display: block;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    align-items: center;
+}
+/* This styles the div elements within .content-display, adding a margin of 10px to create spacing between the elements. */
+.content div {
+    margin: 10px;
+}
+
+/* This styles the element with the ID content-close. It sets the cursor to a pointer to indicate interactivity. The position: absolute positions the element relative to its nearest positioned ancestor. The top, left, and padding properties create space from the top-left corner of its containing block. The border properties create a 1px solid lightgrey border with 45% border-radius, giving it a circular appearance. */
+#content-close {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    padding: 10px;
+    /* width: 35px;; */
+    border: 1px solid lightgrey;
+    border-radius: 45%;
+    left: 20px;
+}
+
+/* This styles the elements with the class imageContainer. It adds a smooth transition effect (transition: 250ms all) to all properties with changes. The width is set to 300px. */
+.imageContainer {
+    transition: 250ms all;
+    width: 300px;
+}
+
+/* This styles the imageContainer elements when hovered over. It adds a 40px margin to the left, giving it a visual effect of moving right. The transform: scale(1.2) scales the element to 1.2 times its original size, giving it a zoom-in effect. The cursor: pointer changes the cursor to a pointer, indicating that the element is interactive. */
+.imageContainer:hover {
+    margin-left: 0 40px;
+    transform: scale(1.2);
+    cursor: pointer;
+}
+/* This further styles the imageContainer elements. It adds a border-radius of 4px, giving the corners a rounded appearance. The box-shadow property creates a subtle shadow effect, and cursor: pointer indicates that the element is interactive. */
+.imageContainer {
+    border-radius: 4px;
+    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+/* This styles the img elements within .imageContainer. It sets the width of the image to 100%, making the image fit the container's width. */
+.imageContainer img {
+    width: 100%;
+}
+/* This styles the elements with the class btn. It sets the text color to white (#fff), the background color to blue (#007bff), and the border color to blue as well. The outline: none removes any default outline on the button when it is focused. margin-left: 700px pushes the button 700px to the right, likely for layout purposes. min-height: 38px sets the minimum height of the button to 38px. font-weight: 400 sets the font weight to normal. text-align: center centers the text within the button. cursor: pointer indicates that the button is interactive and will change the cursor to a pointer. The padding, font-size, line-height, and border-radius properties further style the button to ensure proper spacing and appearance. */
+.btn {
+    color: #fff;
+    background-color: #007bff;
+    border-color: #007bff;
+    outline: none;
+    margin-left: 700px;
+    min-height: 38px;
+    font-weight: 400;
+    text-align: center;
+    cursor: pointer;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: .25rem;
+}
+/* This styles the elements with the class form-group. It adds a margin of 1rem (16px) to the bottom and centers the text within the element. */
+.form-group {
+    margin-bottom: 1rem;
+    text-align: center;
+}
+/* This styles the elements with the class form-control. It sets the width to 760px, adding some space for the form elements. The padding properties create some padding inside the form elements. font-size, font-weight, and line-height properties set the font size, weight, and line height respectively. outline: none removes the default outline when the element is focused. color: #495057 sets the text color to a dark shade. background-color: #fff sets the background color to white. background-clip: padding-box ensures that the background color only applies to the padding area. border: 1px solid #ced4da creates a 1px solid border with a light shade. border-radius: .25rem adds a slight border radius, giving the form elements a slightly rounded appearance. */
+.form-control {
+    width: 760px;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    outline: none;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+}
+/* This styles the elements with the class poster. It sets the width of the poster images to 150px. */
+.poster{
+    width: 150px;
+}
+/* This styles the title element, setting its text color to black. */
+title{
+    color: black;
+}
+/* This is a media query that applies the styles inside its curly braces only when the screen width is 640 pixels or less. */
+@media screen and (max-width:640px) {
+.form-control {
+width: 280px;
+}
+/* This universal selector targets all elements on the page and sets their margin and padding to 0% when the screen width is 640 pixels or less. It is often used to reset default spacing and achieve consistent styling. */
+*{
+    margin: 0%;
+    padding:0%;
+}
+/* This style sets the left margin of elements with the class "btn" to 225 pixels when the screen width is 640 pixels or less. */
+.btn {
+    margin-left: 225px;   
+}
+/* This style sets the width of elements with the class "poster" to 75 pixels when the screen width is 640 pixels or less. */
+.poster{
+    width: 75px;
+}
+/* This style targets h1 elements and applies the following properties when the screen width is 640 pixels or less:
+
+Sets padding on the top of the h1 element to 15 pixels.
+Sets the font size of the h1 element to 30 pixels.
+Applies a background gradient from cyan to red to the text of the h1 element. The -webkit-background-clip and -webkit-text-fill-color properties are used to make the text transparent, allowing the background gradient to show through the text. */
+h1{
+    padding-top: 15px;
+      font-size: 30px;
+    background: -webkit-linear-gradient(cyan, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+/* This style sets a transition duration of 250 milliseconds for all properties and sets the width of elements with the class "imageContainer" to 150 pixels when the screen width is 640 pixels or less. */
+.imageContainer {
+    transition: 250ms all;
+    width: 150px;
+}
+/* This style targets elements with the class "content" and applies the following properties when the screen width is 640 pixels or less:
+
+Sets flex-wrap to "wrap" to allow the content to wrap to the next line if necessary.
+Aligns the flex items (content) along the center in the cross-axis (vertically centered).
+Adds a left padding of 10 pixels to the elements. */
+.content {
+    flex-wrap: wrap;
+    align-items: center;
+    padding-left: 10px;
+}
+/* This style targets an element with the ID "content-close" and applies the following properties when the screen width is 640 pixels or less:
+
+Sets the cursor to a pointer, indicating that the element is clickable.
+Positions the element absolutely within its nearest positioned ancestor (using position: absolute).
+Adds a padding of 10 pixels to the element.
+Specifies a border with 1 pixel width, solid style, and light grey color.
+Sets a border-radius of 45% to create a circular shape.
+Places the element 20 pixels from the left edge of its positioned ancestor. */
+#content-close {
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+    /* width: 35px;; */
+    border: 1px solid lightgrey;
+    border-radius: 45%;
+    left: 20px;
+
+}
+
+}
